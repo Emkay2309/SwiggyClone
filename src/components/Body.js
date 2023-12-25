@@ -10,7 +10,6 @@ function Body() {
     
     const[mindData , setMindData] = useState({});
     const[resData , setResData] = useState({});
-    const[sortBtn , setSortBtn] = useState({});
     const[offerData , setOfferData] = useState({});
     const[topData , settopData] = useState({});
 
@@ -25,7 +24,6 @@ function Body() {
 
             setOfferData(completeJSON.data.cards[0]);
             setMindData(completeJSON.data.cards[1]);
-            setSortBtn(completeJSON.data.cards[2]);
             settopData(completeJSON.data.cards[2]);
             setResData(completeJSON.data.cards[2]);
 

@@ -1,0 +1,13 @@
+.images{
+    height: 180px;
+    width: 270px;
+    border-radius: 10px;
+}
+
+.img-container-data{
+    margin-left: 150px;
+}
+
+.star{
+    color: green;
+}

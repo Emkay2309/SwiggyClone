@@ -6,7 +6,7 @@ function FoodCard({foodjson}) {
     const imgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
     return (
-        <div className='foodcard-container'>
+        <div className='foodcard-container' >
             <div className='foodcardimg-container'>
                 <img className="foodcardimages" src={imgUrl+foodjson?.info?.cloudinaryImageId}></img>
             </div>

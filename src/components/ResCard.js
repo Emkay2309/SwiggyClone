@@ -4,6 +4,7 @@ import FoodCard from './FoodCard'
 function ResCard({resdetailjson }) {
   const title = resdetailjson?.card?.card?.header?.title;
   const resDetails = resdetailjson?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
   
   // console.log(resDetails);
   return (
@@ -11,8 +12,8 @@ function ResCard({resdetailjson }) {
       <h2>Restaurants with online food delivery in Delhi</h2>
       <div className='cards-conatiner'>
         {
-          resDetails.map((items)=> (
-            <FoodCard foodjson={items}/>
+          resDetails.map((items , key)=> (
+            <FoodCard foodjson={items} key={key}/>
           ))
         }
       </div>

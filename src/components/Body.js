@@ -6,6 +6,7 @@ import ResCard from './ResCard'
 import url from '../config/ConstURL'
 import { useEffect , useState} from 'react'
 
+
 function Body() {
     
     const[mindData , setMindData] = useState({});
@@ -22,12 +23,11 @@ function Body() {
             const data = await fetch(url);
             const completeJSON = await data.json();
 
-            setOfferData(completeJSON.data.cards[0]);
-            setMindData(completeJSON.data.cards[1]);
-            settopData(completeJSON.data.cards[2]);
-            setResData(completeJSON.data.cards[2]);
+            setOfferData(completeJSON.data?.cards[0]);
+            setMindData(completeJSON.data?.cards[0]);
+            settopData(completeJSON.data?.cards[1]);
+            setResData(completeJSON.data?.cards[4]);
 
-            
         }
         catch(err) {
             console.log(err);
@@ -42,7 +42,7 @@ function Body() {
     
   return (
     <div className='body-container'>
-        <Offer  offerjson={offerData}/>
+        {/* <Offer  offerjson={offerData}/> */}
         <Mind mindjson={mindData}/>
         <Top topdetailjson={topData}/>
         <ResCard  resdetailjson={resData}/>

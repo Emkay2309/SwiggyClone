@@ -7,10 +7,10 @@ function Top({topdetailjson}) {
   const title = topdetailjson?.card?.card?.header?.title;
   const restaurantList = topdetailjson?.card?.card?.gridElements?.infoWithStyle?.restaurants;
   
-  const carousalCard = restaurantList.map((items,index)=> (
-    <Card key={index} cardjson={items}/>
-    // console.log(items);
-  ));
+  // const carousalCard = restaurantList.map((items,index)=> (
+  //   <Card key={index} cardjson={items}/>
+  //   // console.log(items);
+  // ));
 
   const responsive = {
     desktop: {
@@ -31,9 +31,15 @@ function Top({topdetailjson}) {
   return (
     <div className='res-container'>
       <h2>{title}</h2>
+      
       <div className='card-conatiner'>
         <Carousel responsive={responsive} showDots={false}>
-            {carousalCard}
+            {
+              restaurantList.map((items,index)=> (
+                <Card key={index} cardjson={items}/>
+                // console.log(items);
+              ))
+            }
         </Carousel>
       </div>
     </div>

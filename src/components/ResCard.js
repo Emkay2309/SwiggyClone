@@ -5,7 +5,6 @@ function ResCard({resdetailjson }) {
   const title = resdetailjson?.card?.card?.header?.title;
   const resDetails = resdetailjson?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
-  
   // console.log(resDetails);
   return (
     <div className='res-container'>

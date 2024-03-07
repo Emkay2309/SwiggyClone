@@ -5,6 +5,7 @@ import Top from './Top'
 import ResCard from './ResCard'
 import url from '../config/ConstURL'
 import { useEffect , useState} from 'react'
+import BestPlace from './BestPlace'
 
 
 function Body() {
@@ -13,6 +14,7 @@ function Body() {
     const[resData , setResData] = useState({});
     const[offerData , setOfferData] = useState({});
     const[topData , settopData] = useState({});
+    const[bestPlaceData , setBestPlaceData] = useState({});
 
     useEffect(()=> {
         fetchURL();
@@ -27,6 +29,7 @@ function Body() {
             setMindData(completeJSON.data?.cards[0]);
             settopData(completeJSON.data?.cards[1]);
             setResData(completeJSON.data?.cards[4]);
+            setBestPlaceData(completeJSON.data?.cards[6]);
 
         }
         catch(err) {
@@ -46,6 +49,7 @@ function Body() {
         <Mind mindjson={mindData}/>
         <Top topdetailjson={topData}/>
         <ResCard  resdetailjson={resData}/>
+        <BestPlace bestPlaceDetailJson={bestPlaceData}/>
     </div>
   )
 

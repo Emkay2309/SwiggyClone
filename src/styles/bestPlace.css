@@ -1,0 +1,15 @@
+.bestPlaceCard-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-place{
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+
+    height: 50px;
+    width: 200px;
+    margin-right: 30px;
+
+}
